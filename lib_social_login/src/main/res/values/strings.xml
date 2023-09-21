@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cancelled_by_user">Cancelled</string>
+    <string name="auth_failed">Authorization failed</string>
+
+</resources>

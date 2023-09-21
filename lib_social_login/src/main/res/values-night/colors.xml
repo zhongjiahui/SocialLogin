@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_app_name">#FFFFFF</color>
+    <color name="color_status_bar_bg">#FF000000</color>
+    <color name="color_page_bg">#FF000000</color>
+    <color name="color_text_black">#F7F8FA</color>
+    <color name="color_title_color">#FFFFFF</color>
+    <color name="color_text_color">#FFFFFF</color>
+    <color name="color_spinner_text_color">#86909C</color>
+    <color name="color_icon_color">#E5E6EB</color>
+    <color name="color_line_color">#FFFFFF</color>
+    <color name="color_social_dialog_background">#000000</color>
+    <color name="color_social_button_background">#1D2129</color>
+    <color name="color_edit_background">#1D2129</color>
+    <color name="color_button_background">#1D2129</color>
+
+</resources>
