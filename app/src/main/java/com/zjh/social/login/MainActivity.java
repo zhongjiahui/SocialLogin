@@ -1,15 +1,18 @@
 package com.zjh.social.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.zjh.social.callback.AuthCallback;
-import com.zjh.social.handler.WechatLogin;
+import com.zjh.social.handler.GoogleLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
+import com.zjh.social.params.AlipayParams;
+import com.zjh.social.params.GoogleParams;
 import com.zjh.social.params.WechatParams;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         initWechatLogin();
-
+        initAlipayLogin();
+        initGoogleLogin();
     }
 
     private void initWechatLogin(){
@@ -34,10 +38,44 @@ public class MainActivity extends AppCompatActivity {
         binding.wechatLogin.setOnLoginListener(wechatParams, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
-                Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
+                printLog(code, message, data);
 
             }
         });
     }
 
+    private void initAlipayLogin() {
+        AlipayParams params = new AlipayParams();
+        params.setAppId("wx1cddb15e280c0f67");
+        binding.alipayLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+
+    private void initGoogleLogin() {
+        GoogleParams params = new GoogleParams();
+        params.setServerClientIdl("wx1cddb15e280c0f67");
+        binding.googleLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void printLog(int code, String message, Object data){
+        Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        GoogleLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+    }
 }

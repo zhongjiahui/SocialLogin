@@ -7,6 +7,8 @@ package com.zjh.social.util;
  **/
 public class ResultCode {
 
+    public final static int AUTH_SUCCESS = 200; // 认证成功
+
     public final static int ERROR_PARAMS = 10000; // 参数错误
     public final static int ERROR_ALIPAY = 10001; // Alipay auth failed
 

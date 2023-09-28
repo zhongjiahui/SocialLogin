@@ -32,8 +32,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
 
-    // 微信登录
+    // 微信
     compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+    // 支付宝
     implementation files('libs/alipaysdk.aar')
+    // Google
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
 
 }

@@ -8,23 +8,70 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.zjh.social.view.WechatLoginButton
-            android:id="@+id/wechat_login"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guo_nei_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/guo_nei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="国内"/>
 
-        <com.zjh.social.view.AlipayLoginButton
-            android:id="@+id/alipaylogin"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            <com.zjh.social.view.WechatLoginButton
+                android:id="@+id/wechat_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guo_nei"
+                app:layout_constraintEnd_toStartOf="@+id/alipay_login"/>
+
+            <com.zjh.social.view.AlipayLoginButton
+                android:id="@+id/alipay_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@+id/wechat_login"
+                app:layout_constraintTop_toBottomOf="@+id/guo_nei" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guo_wai_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wechat_login"/>
+            app:layout_constraintTop_toBottomOf="@+id/guo_nei_layout">
+            <TextView
+                android:id="@+id/guo_wai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="国外"/>
+
+            <com.zjh.social.view.GoogleLoginButton
+                android:id="@+id/google_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guo_wai"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

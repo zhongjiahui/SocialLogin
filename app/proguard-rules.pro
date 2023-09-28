@@ -24,3 +24,6 @@
 -keep class com.tencent.mm.opensdk.** {*;}
 -keep class com.tencent.wxop.** {*;}
 -keep class com.tencent.mm.sdk.** {*;}
+
+# Google
+-keep class com.google.android.gms.** { *; }
