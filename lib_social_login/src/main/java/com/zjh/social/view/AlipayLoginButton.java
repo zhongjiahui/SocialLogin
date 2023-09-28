@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zjh.social.R;
+import com.zjh.social.handler.AlipayLogin;
 import com.zjh.social.handler.SocialAuthenticator;
 import com.zjh.social.params.AlipayParams;
 
@@ -31,7 +32,7 @@ public class AlipayLoginButton extends SocialLoginButton<AlipayParams>{
 
     @Override
     protected SocialAuthenticator<AlipayParams> createAuthenticator() {
-        return null;
+        return AlipayLogin.getInstance();
     }
 
     @Override

@@ -11,5 +11,6 @@ public class ResultCode {
 
     public final static int ERROR_PARAMS = 10000; // 参数错误
     public final static int ERROR_ALIPAY = 10001; // Alipay auth failed
+    public final static int ERROR_QQ = 10002; // QQ auth failed
 
 }

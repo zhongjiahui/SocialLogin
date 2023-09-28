@@ -38,5 +38,7 @@ dependencies {
     implementation files('libs/alipaysdk.aar')
     // Google
     implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    // QQ
+    implementation 'com.tencent.tauth:qqopensdk:3.52.0'
 
 }

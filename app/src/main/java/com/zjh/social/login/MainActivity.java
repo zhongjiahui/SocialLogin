@@ -10,9 +10,11 @@ import androidx.databinding.DataBindingUtil;
 
 import com.zjh.social.callback.AuthCallback;
 import com.zjh.social.handler.GoogleLogin;
+import com.zjh.social.handler.QQLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.GoogleParams;
+import com.zjh.social.params.QQParams;
 import com.zjh.social.params.WechatParams;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         initWechatLogin();
         initAlipayLogin();
         initGoogleLogin();
+        initQQLogin();
     }
 
     private void initWechatLogin(){
@@ -69,6 +72,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initQQLogin() {
+        QQParams params = new QQParams();
+        params.setAppId("wx1cddb15e280c0f67");
+        binding.qqLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
     private void printLog(int code, String message, Object data){
         Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
     }
@@ -77,5 +92,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         GoogleLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        QQLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }
