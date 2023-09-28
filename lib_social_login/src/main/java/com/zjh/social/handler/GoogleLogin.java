@@ -23,7 +23,7 @@ import com.zjh.social.util.ResultCode;
 /**
  * @author Administrator
  * @date 2023/9/28
- * @description
+ * @description Google登录逻辑处理
  **/
 public class GoogleLogin extends SocialAuthenticator<GoogleParams>{
 

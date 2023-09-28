@@ -8,7 +8,13 @@ package com.zjh.social.params;
 public class AlipayParams {
 
     private String appId;
+    private String scope;
+    private String state;
 
+    public AlipayParams() {
+        scope = "auth_user";
+        state = "init";
+    }
 
     public String getAppId() {
         return appId;
@@ -16,5 +22,21 @@ public class AlipayParams {
 
     public void setAppId(String appId) {
         this.appId = appId;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

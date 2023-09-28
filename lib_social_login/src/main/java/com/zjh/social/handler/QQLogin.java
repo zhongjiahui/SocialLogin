@@ -22,7 +22,7 @@ import org.json.JSONObject;
 /**
  * @author Administrator
  * @date 2023/9/28
- * @description
+ * @description QQ登录逻辑处理
  **/
 public class QQLogin extends SocialAuthenticator<QQParams>{
 

@@ -3,7 +3,7 @@ package com.zjh.social.params;
 /**
  * @author Administrator
  * @date 2023/9/28
- * @description
+ * @description Google登录参数
  **/
 public class GoogleParams {
 

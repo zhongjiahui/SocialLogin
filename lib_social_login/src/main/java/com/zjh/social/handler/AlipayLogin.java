@@ -28,7 +28,6 @@ import java.util.Map;
 public class AlipayLogin extends SocialAuthenticator<AlipayParams> {
 
     private static final String TAG = "AlipayLogin";
-    private String appId;
 
     private AlipayLogin() {
     }
@@ -44,16 +43,17 @@ public class AlipayLogin extends SocialAuthenticator<AlipayParams> {
 
     @Override
     public void startAuth(@NonNull Context context, AlipayParams params, @NonNull AuthCallback<Object> callback) {
-        appId = params.getAppId();
+        String appId = params.getAppId();
         if (TextUtils.isEmpty(appId)) {
             callback.call(ResultCode.ERROR_PARAMS, "appId 不能为空", null);
             return;
         }
         Activity activity = (Activity) context;
-
+        String scope = params.getScope();
+        String state = params.getState();
         // 传递给支付宝应用的业务参数
-        final Map<String, String> bizParams = new HashMap<>();
-        bizParams.put("url", "https://authweb.alipay.com/auth?auth_type=PURE_OAUTH_SDK&app_id=" + appId + "&scope=auth_user&state=init");
+        final Map<String, String> bizParams = new HashMap<>();//"&scope=auth_user&state=init"
+        bizParams.put("url", "https://authweb.alipay.com/auth?auth_type=PURE_OAUTH_SDK&app_id=" + appId + "&scope=" + scope + "&state=" + state);
 
         // 支付宝回跳到您的应用时使用的 Intent Scheme。
         // 请设置为一个不和其它应用冲突的值，并在 AndroidManifest.xml 中为 AlipayResultActivity 的 android:scheme 属性

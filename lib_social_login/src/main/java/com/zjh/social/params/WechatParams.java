@@ -3,7 +3,7 @@ package com.zjh.social.params;
 /**
  * @author Administrator
  * @date 2023/9/19
- * @description
+ * @description 微信登录参数
  **/
 public class WechatParams {
 
