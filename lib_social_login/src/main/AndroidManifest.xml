@@ -14,4 +14,8 @@
         <package android:name="com.eg.android.AlipayGphone" />
     </queries>
 
+    <queries>
+        <package android:name="com.facebook.katana" />
+    </queries>
+
 </manifest>

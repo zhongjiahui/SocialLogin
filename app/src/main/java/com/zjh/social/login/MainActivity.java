@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.zjh.social.callback.AuthCallback;
+import com.zjh.social.handler.FacebookLogin;
 import com.zjh.social.handler.GoogleLogin;
 import com.zjh.social.handler.QQLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
@@ -93,5 +94,6 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         GoogleLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         QQLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        FacebookLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }
