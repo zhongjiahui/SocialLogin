@@ -50,7 +50,7 @@ public class QQLogin extends SocialAuthenticator<QQParams>{
         }
         String scope = params.getScope();
         mTencent = Tencent.createInstance(appId, context.getApplicationContext());
-        if (!mTencent.isSessionValid()) {
+        if (mTencent != null && !mTencent.isSessionValid()) {
             baseUiListener = new BaseUiListener(mTencent, callback);
             mTencent.login((Activity) context, scope, baseUiListener);
         }

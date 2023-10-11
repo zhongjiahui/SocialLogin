@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zjh.social.R;
+import com.zjh.social.handler.FacebookLogin;
 import com.zjh.social.handler.SocialAuthenticator;
 import com.zjh.social.params.FacebookParams;
 
@@ -31,7 +32,7 @@ public class FacebookLoginButton extends SocialLoginButton<FacebookParams>{
 
     @Override
     protected SocialAuthenticator<FacebookParams> createAuthenticator() {
-        return null;
+        return FacebookLogin.getInstance();
     }
 
     @Override

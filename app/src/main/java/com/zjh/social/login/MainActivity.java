@@ -12,11 +12,14 @@ import com.zjh.social.callback.AuthCallback;
 import com.zjh.social.handler.FacebookLogin;
 import com.zjh.social.handler.GoogleLogin;
 import com.zjh.social.handler.QQLogin;
+import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
+import com.zjh.social.params.FacebookParams;
 import com.zjh.social.params.GoogleParams;
 import com.zjh.social.params.QQParams;
 import com.zjh.social.params.WechatParams;
+import com.zjh.social.params.WeiboParams;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,9 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         initWechatLogin();
         initAlipayLogin();
-        initGoogleLogin();
         initQQLogin();
+        initWeiboLogin();
+
+        initGoogleLogin();
+        initFacebookLogin();
     }
+
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -60,6 +67,30 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initQQLogin() {
+        QQParams params = new QQParams();
+        params.setAppId("wx1cddb15e280c0f67");
+        binding.qqLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initWeiboLogin() {
+        WeiboParams params = new WeiboParams();
+        params.setAppKey("wx1cddb15e280c0f67");
+        binding.weiboLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
 
     private void initGoogleLogin() {
         GoogleParams params = new GoogleParams();
@@ -73,10 +104,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initQQLogin() {
-        QQParams params = new QQParams();
-        params.setAppId("wx1cddb15e280c0f67");
-        binding.qqLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+    private void initFacebookLogin() {
+        FacebookParams params = new FacebookParams();
+        binding.facebookLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);
@@ -84,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void printLog(int code, String message, Object data){
         Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
@@ -95,5 +127,6 @@ public class MainActivity extends AppCompatActivity {
         GoogleLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         QQLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         FacebookLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        WeiboLogin.getInstance().onActivityResult(this, requestCode, resultCode, data);
     }
 }
