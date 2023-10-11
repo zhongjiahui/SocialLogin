@@ -15,6 +15,7 @@ import com.zjh.social.handler.QQLogin;
 import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
+import com.zjh.social.params.BaiduParams;
 import com.zjh.social.params.FacebookParams;
 import com.zjh.social.params.GoogleParams;
 import com.zjh.social.params.QQParams;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         initAlipayLogin();
         initQQLogin();
         initWeiboLogin();
+        initBaiduLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -83,6 +85,18 @@ public class MainActivity extends AppCompatActivity {
         WeiboParams params = new WeiboParams();
         params.setAppKey("wx1cddb15e280c0f67");
         binding.weiboLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initBaiduLogin() {
+        BaiduParams params = new BaiduParams();
+        params.setAppKey("wx1cddb15e280c0f67");
+        binding.baiduLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);

@@ -57,7 +57,7 @@ public class WeiboLogin extends SocialAuthenticator<WeiboParams>{
             @Override
             public void onComplete(Oauth2AccessToken token) {
                 Log.i(TAG, "Auth onSuccess");
-                callback.call(ResultCode.AUTH_SUCCESS, "Facebook auth success", token.getAccessToken());
+                callback.call(ResultCode.AUTH_SUCCESS, "Weibo auth success", token.getAccessToken());
             }
 
             @Override

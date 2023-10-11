@@ -44,4 +44,6 @@ dependencies {
     compileOnly 'com.facebook.android:facebook-login:latest.release'
     // 新浪微博
     implementation 'io.github.sinaweibosdk:core:12.5.0@aar'
+    // 百度
+    implementation files('libs/baidu-android-openapi-sdk.jar')
 }
