@@ -41,6 +41,6 @@ dependencies {
     // QQ
     implementation 'com.tencent.tauth:qqopensdk:3.52.0'
     // Facebook
-    implementation 'com.facebook.android:facebook-login:latest.release'
+    compileOnly 'com.facebook.android:facebook-login:latest.release'
 
 }

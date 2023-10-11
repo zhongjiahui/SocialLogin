@@ -63,4 +63,6 @@ dependencies {
 
     // 微信登录
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+    // Facebook
+    implementation 'com.facebook.android:facebook-login:latest.release'
 }
