@@ -10,4 +10,5 @@ public class RequestCode {
     public static final int REQUEST_LINKEDIN = 2001;
     public static final int REQUEST_GITHUB = 2002;
     public static final int REQUEST_GITEE = 2003;
+    public static final int REQUEST_GITLAB = 2004;
 }

@@ -133,6 +133,15 @@
                 app:layout_constraintStart_toEndOf="@+id/linkedin_login"
                 app:layout_constraintTop_toBottomOf="@+id/guo_wai" />
 
+            <com.zjh.social.view.GitLabLoginButton
+                android:id="@+id/gitlab_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@+id/github_login"
+                app:layout_constraintTop_toBottomOf="@+id/guo_wai" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

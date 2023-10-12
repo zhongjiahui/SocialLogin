@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.zjh.social.callback.AuthCallback;
 import com.zjh.social.handler.FacebookLogin;
+import com.zjh.social.handler.GitLabLogin;
 import com.zjh.social.handler.GiteeLogin;
 import com.zjh.social.handler.GithubLogin;
 import com.zjh.social.handler.GoogleLogin;
@@ -20,6 +21,7 @@ import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.BaiduParams;
 import com.zjh.social.params.FacebookParams;
+import com.zjh.social.params.GitLabParams;
 import com.zjh.social.params.GiteeParams;
 import com.zjh.social.params.GithubParams;
 import com.zjh.social.params.GoogleParams;
@@ -51,10 +53,8 @@ public class MainActivity extends AppCompatActivity {
         initFacebookLogin();
         initLinkedinLogin();
         initGithubLogin();
+        initGitLabLogin();
     }
-
-
-
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -178,6 +178,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initGitLabLogin() {
+        GitLabParams params = new GitLabParams();
+        params.setAppId("wx1cddb15e280c0f67");
+        binding.gitlabLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+
 
     private void printLog(int code, String message, Object data){
         Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
@@ -193,5 +206,6 @@ public class MainActivity extends AppCompatActivity {
         LinkedinLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         GithubLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         GiteeLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        GitLabLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }
