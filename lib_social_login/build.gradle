@@ -53,4 +53,6 @@ dependencies {
     implementation "com.github.kwaisocial:kwai-opensdk-withauth:3.0.4"
     // 企业微信
     implementation files('libs/lib_wwapi-2.0.12.11.aar')
+    // 飞书
+    compileOnly files ('libs/larksso-3.0.8.aar')
 }
