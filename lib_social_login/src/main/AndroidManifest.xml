@@ -11,6 +11,11 @@
         <package android:name="com.tencent.mm" />
     </queries>
 
+    <!-- 企业微信 -->
+    <queries>
+        <package android:name="com.tencent.wework" />
+    </queries>
+
     <!-- 支付宝 -->
     <queries>
         <package android:name="com.eg.android.AlipayGphone" />

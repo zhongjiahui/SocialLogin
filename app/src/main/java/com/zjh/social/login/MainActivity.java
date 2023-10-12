@@ -29,6 +29,7 @@ import com.zjh.social.params.GoogleParams;
 import com.zjh.social.params.KuaiShouParams;
 import com.zjh.social.params.LinkedinParams;
 import com.zjh.social.params.QQParams;
+import com.zjh.social.params.WeComParams;
 import com.zjh.social.params.WechatParams;
 import com.zjh.social.params.WeiboParams;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         initGiteeLogin();
         initDouYinLogin();
         initKuaiShouLogin();
+        initWeComLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -59,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         initGithubLogin();
         initGitLabLogin();
     }
-
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -155,6 +156,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void initWeComLogin() {
+        WeComParams params = new WeComParams();
+        binding.wecomLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
 
 
 

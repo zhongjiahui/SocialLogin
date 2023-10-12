@@ -27,3 +27,7 @@
 
 # Google
 -keep class com.google.android.gms.** { *; }
+
+# 企业微信
+-keep class com.tencent.wework.api.** { *; }
+

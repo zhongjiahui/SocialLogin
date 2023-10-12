@@ -51,4 +51,6 @@ dependencies {
     compileOnly 'com.bytedance.ies.ugc.aweme:opensdk-common:0.1.9.6'
     // 快手
     implementation "com.github.kwaisocial:kwai-opensdk-withauth:3.0.4"
+    // 企业微信
+    implementation files('libs/lib_wwapi-2.0.12.11.aar')
 }
