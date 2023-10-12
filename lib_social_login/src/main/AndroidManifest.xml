@@ -6,16 +6,32 @@
 
     </application>
 
+    <!-- QQ -->
     <queries>
         <package android:name="com.tencent.mm" />
     </queries>
 
+    <!-- 支付宝 -->
     <queries>
         <package android:name="com.eg.android.AlipayGphone" />
     </queries>
 
+    <!-- facebook -->
     <queries>
         <package android:name="com.facebook.katana" />
+    </queries>
+
+    <!-- 抖音 -->
+    <queries>
+        <!--允许查询抖音和抖音极速版的软件包信息-->
+        <package android:name="com.ss.android.ugc.aweme" />
+        <package android:name="com.ss.android.ugc.aweme.lite" />
+    </queries>
+
+    <!-- 快手 -->
+    <queries>
+        <package android:name="com.smile.gifmaker"/>
+        <package android:name="com.kuaishou.nebula"/>
     </queries>
 
 </manifest>

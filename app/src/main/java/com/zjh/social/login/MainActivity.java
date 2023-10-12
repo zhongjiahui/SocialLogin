@@ -26,6 +26,7 @@ import com.zjh.social.params.GitLabParams;
 import com.zjh.social.params.GiteeParams;
 import com.zjh.social.params.GithubParams;
 import com.zjh.social.params.GoogleParams;
+import com.zjh.social.params.KuaiShouParams;
 import com.zjh.social.params.LinkedinParams;
 import com.zjh.social.params.QQParams;
 import com.zjh.social.params.WechatParams;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         initBaiduLogin();
         initGiteeLogin();
         initDouYinLogin();
+        initKuaiShouLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -57,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         initGithubLogin();
         initGitLabLogin();
     }
-
 
 
     private void initWechatLogin(){
@@ -136,6 +137,17 @@ public class MainActivity extends AppCompatActivity {
         DouYinParams params = new DouYinParams();
         params.setClientKey("wx1cddb15e280c0f67");
         binding.douyinLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initKuaiShouLogin() {
+        KuaiShouParams params = new KuaiShouParams();
+        binding.kuaishouLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);

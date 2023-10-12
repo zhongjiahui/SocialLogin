@@ -49,4 +49,6 @@ dependencies {
     // 抖音
     compileOnly 'com.bytedance.ies.ugc.aweme:opensdk-china-external:0.1.9.6'
     compileOnly 'com.bytedance.ies.ugc.aweme:opensdk-common:0.1.9.6'
+    // 快手
+    implementation "com.github.kwaisocial:kwai-opensdk-withauth:3.0.4"
 }

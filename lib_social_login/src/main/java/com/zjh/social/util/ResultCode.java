@@ -20,4 +20,5 @@ public class ResultCode {
     public final static int ERROR_GITEE = 10008; // Gitee auth failed
     public final static int ERROR_GITLAB = 10009; // GitLab auth failed
     public final static int ERROR_DOU_YIN = 10010; // 抖音 auth failed
+    public final static int ERROR_KUAI_SHOU = 10011; // 快手 auth failed
 }
