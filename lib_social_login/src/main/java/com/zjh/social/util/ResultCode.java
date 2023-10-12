@@ -16,5 +16,6 @@ public class ResultCode {
     public final static int ERROR_WEIBO = 10004; // Weibo auth failed
     public final static int ERROR_BAIDU = 10005; // 百度 auth failed
     public final static int ERROR_LINKEDIN = 10006; // Linkedin auth failed
+    public final static int ERROR_GITHUB = 10007; // Github auth failed
 
 }
