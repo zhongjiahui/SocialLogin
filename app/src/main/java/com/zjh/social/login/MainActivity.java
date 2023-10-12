@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import com.zjh.social.callback.AuthCallback;
 import com.zjh.social.handler.FacebookLogin;
 import com.zjh.social.handler.GoogleLogin;
+import com.zjh.social.handler.LinkedinLogin;
 import com.zjh.social.handler.QQLogin;
 import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
@@ -18,6 +19,7 @@ import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.BaiduParams;
 import com.zjh.social.params.FacebookParams;
 import com.zjh.social.params.GoogleParams;
+import com.zjh.social.params.LinkedinParams;
 import com.zjh.social.params.QQParams;
 import com.zjh.social.params.WechatParams;
 import com.zjh.social.params.WeiboParams;
@@ -42,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
         initGoogleLogin();
         initFacebookLogin();
+        initLinkedinLogin();
     }
+
+
 
 
     private void initWechatLogin(){
@@ -129,6 +134,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initLinkedinLogin() {
+        LinkedinParams params = new LinkedinParams();
+        params.setAppKey("wx1cddb15e280c0f67");
+        binding.linkedinLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
 
 
     private void printLog(int code, String message, Object data){
@@ -142,5 +158,6 @@ public class MainActivity extends AppCompatActivity {
         QQLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         FacebookLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         WeiboLogin.getInstance().onActivityResult(this, requestCode, resultCode, data);
+        LinkedinLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }

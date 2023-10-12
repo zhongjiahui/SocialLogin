@@ -3,5 +3,6 @@
 
     <string name="cancelled_by_user">Cancelled</string>
     <string name="auth_failed">Authorization failed</string>
+    <string name="please_wait">Please wait! This may take a moment.</string>
 
 </resources>

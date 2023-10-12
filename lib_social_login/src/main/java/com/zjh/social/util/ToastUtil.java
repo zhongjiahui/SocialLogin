@@ -30,7 +30,7 @@ public class ToastUtil {
     }
 
     public static void showTop(Context context, String text, int duration) {
-        View view = LayoutInflater.from(context).inflate(R.layout.authing_toast_layout_top, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout_top, null);
         TextView tv_msg = view.findViewById(R.id.toast_text);
         tv_msg.setText(text);
         Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
@@ -47,7 +47,7 @@ public class ToastUtil {
     }
 
     public static void showTopError(Context context, String text, int duration) {
-        View view = LayoutInflater.from(context).inflate(R.layout.authing_toast_layout_top, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout_top, null);
         view.setBackgroundResource(R.drawable.background_toast_error);
         TextView tv_msg = view.findViewById(R.id.toast_text);
         tv_msg.setText(text);
@@ -72,7 +72,7 @@ public class ToastUtil {
     }
 
     public static void showCenter(Context context, String text, int imageResId, int duration) {
-        View view = LayoutInflater.from(context).inflate(R.layout.authing_toast_layout_center, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout_center, null);
         ImageView imageView = view.findViewById(R.id.toast_image);
         if (imageResId != 0){
             imageView.setVisibility(View.VISIBLE);
@@ -94,7 +94,7 @@ public class ToastUtil {
     }
 
     public static void showCenterWarning(Context context, String text, int duration) {
-        View view = LayoutInflater.from(context).inflate(R.layout.authing_toast_layout_center_warning, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout_center_warning, null);
         TextView tv_msg = view.findViewById(R.id.toast_text);
         tv_msg.setText(text);
         Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);

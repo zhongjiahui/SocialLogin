@@ -2,5 +2,6 @@
 
     <string name="cancelled_by_user">已取消</string>
     <string name="auth_failed">授权失败</string>
+    <string name="please_wait">请稍后！</string>
 
 </resources>
