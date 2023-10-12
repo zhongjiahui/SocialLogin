@@ -12,6 +12,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter()
+        // 抖音
+        maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
     }
 }
 rootProject.name = "SocialLogin"

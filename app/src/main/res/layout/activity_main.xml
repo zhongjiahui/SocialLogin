@@ -78,6 +78,15 @@
                 android:layout_marginStart="25dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/wechat_login" />
+
+            <com.zjh.social.view.DouYinLoginButton
+                android:id="@+id/douyin_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@+id/gitee_login"
+                app:layout_constraintTop_toBottomOf="@+id/wechat_login" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

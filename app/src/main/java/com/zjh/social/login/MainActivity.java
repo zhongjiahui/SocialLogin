@@ -20,6 +20,7 @@ import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.BaiduParams;
+import com.zjh.social.params.DouYinParams;
 import com.zjh.social.params.FacebookParams;
 import com.zjh.social.params.GitLabParams;
 import com.zjh.social.params.GiteeParams;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         initWeiboLogin();
         initBaiduLogin();
         initGiteeLogin();
+        initDouYinLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         initGithubLogin();
         initGitLabLogin();
     }
+
+
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -120,6 +124,18 @@ public class MainActivity extends AppCompatActivity {
         GiteeParams params = new GiteeParams();
         params.setClientId("wx1cddb15e280c0f67");
         binding.giteeLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initDouYinLogin() {
+        DouYinParams params = new DouYinParams();
+        params.setClientKey("wx1cddb15e280c0f67");
+        binding.douyinLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);
