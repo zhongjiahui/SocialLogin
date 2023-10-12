@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.zjh.social.callback.AuthCallback;
 import com.zjh.social.handler.FacebookLogin;
+import com.zjh.social.handler.GiteeLogin;
 import com.zjh.social.handler.GithubLogin;
 import com.zjh.social.handler.GoogleLogin;
 import com.zjh.social.handler.LinkedinLogin;
@@ -19,6 +20,7 @@ import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.BaiduParams;
 import com.zjh.social.params.FacebookParams;
+import com.zjh.social.params.GiteeParams;
 import com.zjh.social.params.GithubParams;
 import com.zjh.social.params.GoogleParams;
 import com.zjh.social.params.LinkedinParams;
@@ -43,12 +45,15 @@ public class MainActivity extends AppCompatActivity {
         initQQLogin();
         initWeiboLogin();
         initBaiduLogin();
+        initGiteeLogin();
 
         initGoogleLogin();
         initFacebookLogin();
         initLinkedinLogin();
         initGithubLogin();
     }
+
+
 
 
     private void initWechatLogin(){
@@ -110,6 +115,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void initGiteeLogin() {
+        GiteeParams params = new GiteeParams();
+        params.setClientId("wx1cddb15e280c0f67");
+        binding.giteeLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
 
 
     private void initGoogleLogin() {
@@ -174,5 +192,6 @@ public class MainActivity extends AppCompatActivity {
         WeiboLogin.getInstance().onActivityResult(this, requestCode, resultCode, data);
         LinkedinLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         GithubLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        GiteeLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }

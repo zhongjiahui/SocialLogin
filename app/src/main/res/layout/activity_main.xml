@@ -69,6 +69,15 @@
                 android:layout_marginStart="25dp"
                 app:layout_constraintStart_toEndOf="@+id/weibo_login"
                 app:layout_constraintTop_toBottomOf="@+id/guo_nei" />
+
+            <com.zjh.social.view.GiteeLoginButton
+                android:id="@+id/gitee_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wechat_login" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
