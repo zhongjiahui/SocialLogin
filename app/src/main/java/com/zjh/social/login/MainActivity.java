@@ -21,6 +21,7 @@ import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
 import com.zjh.social.params.BaiduParams;
+import com.zjh.social.params.DingTalkParams;
 import com.zjh.social.params.DouYinParams;
 import com.zjh.social.params.FacebookParams;
 import com.zjh.social.params.GitLabParams;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         initKuaiShouLogin();
         initWeComLogin();
         initLarkLogin();
+        initDingTalkLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -175,6 +177,17 @@ public class MainActivity extends AppCompatActivity {
     private void initLarkLogin() {
         LarkParams params = new LarkParams();
         binding.larkLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initDingTalkLogin() {
+        DingTalkParams params = new DingTalkParams();
+        binding.dingtalkLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);

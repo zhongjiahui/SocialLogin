@@ -54,5 +54,9 @@ dependencies {
     // 企业微信
     implementation files('libs/lib_wwapi-2.0.12.11.aar')
     // 飞书
-    compileOnly files ('libs/larksso-3.0.8.aar')
+    implementation files ('libs/larksso-3.0.8.aar')
+    implementation 'com.alibaba:fastjson:1.1.58.android'
+    // 钉钉
+    implementation 'com.alibaba.android:ddopenauth:1.5.0.8'
+    implementation 'com.alibaba.android:ddsharesdk:1.1.0'
 }

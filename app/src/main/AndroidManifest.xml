@@ -69,6 +69,10 @@
             android:exported="true">
         </activity>
 
+        <!-- 钉钉 -->
+        <activity android:name=".ddauth.DDAuthActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

@@ -31,3 +31,7 @@
 # 企业微信
 -keep class com.tencent.wework.api.** { *; }
 
+# 钉钉
+-keep class com.android.dingtalk.openauth.**{*;}
+
+
