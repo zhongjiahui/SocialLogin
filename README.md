@@ -9,22 +9,25 @@
 |      | QQ             | QQLoginButton       | QQLogin       | QQParams       |
 |      | 新浪微博       | WeiboLoginButton    | WeiboLogin    | WeiboParams    |
 |      | 百度           | BaiduLoginButton    | BaiduLogin    | BaiduParams    |
-|      | 抖音           |                     |               |                |
-|      | 快手           |                     |               |                |
-|      | 华为           |                     |               |                |
-|      | OPPO           |                     |               |                |
-|      | 小米           |                     |               |                |
-|      | 企业微信       |                     |               |                |
-|      | 飞书           |                     |               |                |
-|      | 钉钉           |                     |               |                |
-|      | Gitee          |                     |               |                |
-|      | 手机号一键登录 |                     |               |                |
+|      | 抖音           | DouYinLoginButton   | DouYinLogin   | DouYinParams   |
+|      | 快手           | KuaiShouLoginButton | KuaiShouLogin | KuaiShouParams |
+|      | 华为           | HuaWeiLoginButton   | HuaWeiLogin   | HuaweiParams   |
+|      | OPPO           | OPPOLoginButton     | OPPOLogin     | OPPOParams     |
+|      | 小米           | XiaomiLoginButton   | XiaomiLogin   | XiaomiParams   |
+|      | 企业微信       | WeComLoginButton    | WeComLogin    | WeComParams    |
+|      | 飞书           | LarkLoginButton     | LarkLogin     | LarkParams     |
+|      | 钉钉           | DingTalkLoginButton | DingTalkLogin | DingTalkParams |
+|      | Gitee          | GiteeLoginButton    | GiteeLogin    | GiteeParams    |
+|      | 手机号一键登录 | OneClickLoginButton | OneClickLogin | OneClickParams |
 | 国外 | Google         | GoogleLoginButton   | GoogleLogin   | GoogleParams   |
 |      | Facebook       | FacebookLoginButton | FacebookLogin | FacebookParams |
-|      | Linkedin       |                     |               |                |
-|      | Github         |                     |               |                |
-|      | Gitlab         |                     |               |                |
-|      | Line           |                     |               |                |
-|      | 亚马逊         |                     |               |                |
-|      | Slack          |                     |               |                |
+|      | Linkedin       | LinkedinLoginButton | LinkedinLogin | LinkedinParams |
+|      | Github         | GithubLoginButton   | GithubLogin   | GithubParams   |
+|      | Gitlab         | GitLabLoginButton   | GitLabLogin   | GitLabParams   |
+|      | Line           | LineLoginButton     | LineLogin     | LineParams     |
+|      | 亚马逊         | AmazonLoginButton   | AmazonLogin   | AmazonParams   |
+|      | Slack          | SlackLoginButton    | SlackLogin    | SlackParams    |
+|      | Twitter        | TwitterLoginButton  | TwitterLogin  | TwitterParams  |
+
+![](./img/image_home.png)
 
