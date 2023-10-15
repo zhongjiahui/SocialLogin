@@ -16,5 +16,6 @@ public class SocialApplication extends Application {
         super.onCreate();
 
         SocialLogin.getInstance().initKuaiShou(this);
+        SocialLogin.getInstance().initOPPO(this);
     }
 }

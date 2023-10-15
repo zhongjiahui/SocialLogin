@@ -16,6 +16,14 @@ dependencyResolutionManagement {
         maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
         // 华为
         maven {url 'https://developer.huawei.com/repo/'}
+        // oppo
+        maven {
+            url 'https://maven.columbus.heytapmobi.com/repository/maven-public/'
+            credentials {
+                username 'cmuser'
+                password 'c0b08da17ery566c3870fed67789bcb36abc2e32'
+            }
+        }
     }
 }
 rootProject.name = "SocialLogin"

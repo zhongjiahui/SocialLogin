@@ -88,6 +88,12 @@
             </intent-filter>
         </activity>
 
+        <!-- OPPO -->
+        <meta-data
+            android:name="com.heytap.msp.client.appid"
+            android:value="30828869" />
+
+
     </application>
 
 </manifest>

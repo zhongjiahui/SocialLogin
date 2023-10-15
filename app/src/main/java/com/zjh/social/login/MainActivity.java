@@ -38,6 +38,7 @@ import com.zjh.social.params.KuaiShouParams;
 import com.zjh.social.params.LarkParams;
 import com.zjh.social.params.LineParams;
 import com.zjh.social.params.LinkedinParams;
+import com.zjh.social.params.OPPOParams;
 import com.zjh.social.params.QQParams;
 import com.zjh.social.params.SlackParams;
 import com.zjh.social.params.WeComParams;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         initLarkLogin();
         initDingTalkLogin();
         initHuaweiLogin();
+        initOppologin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         AmazonLogin.getInstance().onCreate(this);
 
     }
+
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -220,6 +223,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initOppologin() {
+        OPPOParams params = new OPPOParams();
+        params.setAppId("30828869");
+        binding.oppoLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
 
 
 

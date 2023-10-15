@@ -68,4 +68,7 @@ dependencies {
     compileOnly files('libs/login-with-amazon-sdk.jar')
     // 华为
     implementation 'com.huawei.hms:hwid:6.9.0.301'
+    // oppo
+    implementation 'com.heytap.msp.sdk:msp-sdk:1.10.1.2'
+    implementation 'com.heytap.msp.sdk:msp-oauth-sdk:1.10.1.2'
 }

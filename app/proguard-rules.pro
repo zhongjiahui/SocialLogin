@@ -45,4 +45,34 @@
 -keep class com.huawei.updatesdk.**{*;}
 -keep class com.huawei.hms.**{*;}
 
+# OPPO
+-keepattributes Annotation
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keepclassmembers enum * {
+    public static [] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator ;
+}
+-keep class * implements java.io.Serializable{;}
+-keep class com.bun.miitmdid. {;}
+-keeppackagenames com.heytap.msp**
+-keep class com.heytap.openid.sdk.HeytapIDSDK{;}
+-keep class com.heytap.usercenter.{;}
+-keep class com.platform.usercenter.annotation.Keep
+-keep @com.platform.usercenter.annotation.Keep class * {;}
+-keep interface com.heytap.msp.{;}
+-keep class com.heytap.msp.sdk.base.**{;}
+
+-keep class com.heytap.msp.sdk.SdkAgent{;}
+-keep class com.heytap.msp.sdk.common.**{;}
+-keep class com.heytap.msp.sdk.agent.AccountSdkAgent{;}
+-keep class com.heytap.msp.sdk.AccountSdk{;}
+-keep class com.heytap.msp.sdk.agent.OAuthSdkAgent{;}
+-keep class com.heytap.msp.sdk.OAuthSdk{;}
+-keep class com.platform.oms.**{*;}
 
