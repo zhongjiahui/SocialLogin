@@ -24,6 +24,9 @@ dependencyResolutionManagement {
                 password 'c0b08da17ery566c3870fed67789bcb36abc2e32'
             }
         }
+        // 小米
+        maven { url 'https://raw.githubusercontent.com/xiaomi-passport/maven-repository/master/releases' }
+        //maven { url 'https://gitlab.com/xiaomi-passport/maven-repository/raw/master/releases' }
     }
 }
 rootProject.name = "SocialLogin"

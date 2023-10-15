@@ -26,5 +26,6 @@ public class ResultCode {
     public final static int ERROR_AMAZON = 10014; // Amazon auth failed
     public final static int ERROR_SLACK = 10015; // Slack auth failed
     public final static int ERROR_HUAWEI = 10016; // 华为 auth failed
-    public final static int ERROR_OPPO = 10027; // OPPO auth failed
+    public final static int ERROR_OPPO = 10017; // OPPO auth failed
+    public final static int ERROR_XIAOMI = 10018; // 小米 auth failed
 }

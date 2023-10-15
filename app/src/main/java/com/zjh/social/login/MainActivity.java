@@ -44,6 +44,7 @@ import com.zjh.social.params.SlackParams;
 import com.zjh.social.params.WeComParams;
 import com.zjh.social.params.WechatParams;
 import com.zjh.social.params.WeiboParams;
+import com.zjh.social.params.XiaomiParams;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         initDingTalkLogin();
         initHuaweiLogin();
         initOppologin();
+        initXiaomiLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -227,6 +229,19 @@ public class MainActivity extends AppCompatActivity {
         OPPOParams params = new OPPOParams();
         params.setAppId("30828869");
         binding.oppoLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initXiaomiLogin() {
+        XiaomiParams params = new XiaomiParams();
+        params.setAppId(30828869);
+        params.setRedirectUri("https://www.baidu.com/");
+        binding.xiaomiLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);
