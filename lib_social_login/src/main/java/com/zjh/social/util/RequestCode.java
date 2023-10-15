@@ -11,5 +11,6 @@ public class RequestCode {
     public static final int REQUEST_GITHUB = 2002;
     public static final int REQUEST_GITEE = 2003;
     public static final int REQUEST_GITLAB = 2004;
-    public static final int REQUEST_LINE = 20056;
+    public static final int REQUEST_LINE = 2005;
+    public static final int REQUEST_SLACK = 2006;
 }

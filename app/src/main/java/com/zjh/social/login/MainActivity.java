@@ -19,6 +19,7 @@ import com.zjh.social.handler.LarkLogin;
 import com.zjh.social.handler.LineLogin;
 import com.zjh.social.handler.LinkedinLogin;
 import com.zjh.social.handler.QQLogin;
+import com.zjh.social.handler.SlackLogin;
 import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
@@ -36,6 +37,7 @@ import com.zjh.social.params.LarkParams;
 import com.zjh.social.params.LineParams;
 import com.zjh.social.params.LinkedinParams;
 import com.zjh.social.params.QQParams;
+import com.zjh.social.params.SlackParams;
 import com.zjh.social.params.WeComParams;
 import com.zjh.social.params.WechatParams;
 import com.zjh.social.params.WeiboParams;
@@ -70,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
         initGithubLogin();
         initGitLabLogin();
         initLineLogin();
+        initSlackLogin();
         initAmazonLogin();
         AmazonLogin.getInstance().onCreate(this);
 
     }
-
 
     private void initWechatLogin(){
         WechatParams wechatParams = new WechatParams();
@@ -279,6 +281,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initSlackLogin() {
+        SlackParams params = new SlackParams();
+        params.setClientId("wx1cddb15e280c0f67");
+        binding.slackLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+
     private void initAmazonLogin() {
         AmazonParams params = new AmazonParams();
         binding.amazonLogin.setOnLoginListener(params, new AuthCallback<Object>() {
@@ -320,5 +335,6 @@ public class MainActivity extends AppCompatActivity {
         GitLabLogin.getInstance().onActivityResult(requestCode, resultCode, data);
         LarkLogin.getInstance().onActivityResult(this, data);
         LineLogin.getInstance().onActivityResult(requestCode, resultCode, data);
+        SlackLogin.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 }
