@@ -29,5 +29,5 @@
 |      | Slack          | SlackLoginButton    | SlackLogin    | SlackParams    |
 |      | Twitter        | TwitterLoginButton  | TwitterLogin  | TwitterParams  |
 
-![](./img/image_home.png width = 300)
+<img src="./img/image_home.png" alt = "drawing" width = "300">
 
