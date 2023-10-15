@@ -40,6 +40,7 @@ import com.zjh.social.params.LarkParams;
 import com.zjh.social.params.LineParams;
 import com.zjh.social.params.LinkedinParams;
 import com.zjh.social.params.OPPOParams;
+import com.zjh.social.params.OneClickParams;
 import com.zjh.social.params.QQParams;
 import com.zjh.social.params.SlackParams;
 import com.zjh.social.params.TwitterParams;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         initHuaweiLogin();
         initOppologin();
         initXiaomiLogin();
+        initOneClickLogin();
 
         initGoogleLogin();
         initFacebookLogin();
@@ -244,6 +246,18 @@ public class MainActivity extends AppCompatActivity {
         params.setAppId(30828869);
         params.setRedirectUri("https://www.baidu.com/");
         binding.xiaomiLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
+    private void initOneClickLogin() {
+        OneClickParams params = new OneClickParams();
+        params.setBusinessId("74ae90bd84f74b69a88b578bbbbcdcfd");
+        binding.oneclickLogin.setOnLoginListener(params, new AuthCallback<Object>() {
             @Override
             public void call(int code, String message, Object data) {
                 printLog(code, message, data);

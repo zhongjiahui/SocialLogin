@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleLayout">
+        <attr name="showBackIcon" format="boolean" />
+        <attr name="showTitleText" format="boolean" />
+        <attr name="showSkipText" format="boolean" />
+        <attr name="showSkipIcon" format="boolean" />
+        <attr name="titleText" format="string" />
+        <attr name="titleTextColor" format="reference|color" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextBold" format="boolean" />
+        <attr name="skipText" format="string" />
+        <attr name="skipTextColor" format="reference|color" />
+        <attr name="skipTextSize" format="dimension" />
+        <attr name="skipTextBold" format="boolean" />
+        <attr name="checkNetWork" format="boolean" />
+        <attr name="onlyCheckNetWork" format="boolean" />
+    </declare-styleable>
+
+</resources>

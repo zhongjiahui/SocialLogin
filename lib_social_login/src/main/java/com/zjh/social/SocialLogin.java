@@ -3,6 +3,7 @@ package com.zjh.social;
 import android.annotation.SuppressLint;
 import android.app.Application;
 
+import com.heytap.msp.sdk.OAuthSdk;
 import com.heytap.msp.sdk.SdkAgent;
 import com.kwai.auth.KwaiAuthAPI;
 
@@ -31,5 +32,6 @@ public class SocialLogin {
 
     public void initOPPO(Application context){
         SdkAgent.init(context);
+        OAuthSdk.init(context);
     }
 }

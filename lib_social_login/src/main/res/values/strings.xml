@@ -4,5 +4,9 @@
     <string name="cancelled_by_user">Cancelled</string>
     <string name="auth_failed">Authorization failed</string>
     <string name="please_wait">Please wait! This may take a moment.</string>
+    <string name="current_phone_login">Login with current phone number</string>
+    <string name="skip">Skip</string>
+    <string name="network_error_tips">The network is abnormal. Check the network Settings</string>
+    <string name="other_login">Other login methods</string>
 
 </resources>

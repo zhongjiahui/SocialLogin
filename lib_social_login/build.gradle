@@ -79,4 +79,7 @@ dependencies {
     // Twitter
     implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
     implementation 'com.twitter.sdk.android:tweet-composer:3.3.0'
+
+    // 通过网易云盾实现一键登录
+    implementation 'io.github.yidun:quicklogin:3.2.4'
 }
