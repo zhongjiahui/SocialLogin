@@ -66,4 +66,6 @@ dependencies {
     }
     // Amazon
     compileOnly files('libs/login-with-amazon-sdk.jar')
+    // 华为
+    implementation 'com.huawei.hms:hwid:6.9.0.301'
 }

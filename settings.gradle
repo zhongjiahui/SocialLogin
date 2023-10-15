@@ -14,6 +14,8 @@ dependencyResolutionManagement {
         jcenter()
         // 抖音
         maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
+        // 华为
+        maven {url 'https://developer.huawei.com/repo/'}
     }
 }
 rootProject.name = "SocialLogin"

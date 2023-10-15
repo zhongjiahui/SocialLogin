@@ -13,4 +13,5 @@ public class RequestCode {
     public static final int REQUEST_GITLAB = 2004;
     public static final int REQUEST_LINE = 2005;
     public static final int REQUEST_SLACK = 2006;
+    public static final int REQUEST_HUAWEI = 2007;
 }
