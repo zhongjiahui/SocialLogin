@@ -76,4 +76,7 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
         exclude group: 'com.google.guava', module: 'listenablefuture'
     }
+    // Twitter
+    implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
+    implementation 'com.twitter.sdk.android:tweet-composer:3.3.0'
 }

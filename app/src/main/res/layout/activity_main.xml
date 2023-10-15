@@ -241,6 +241,15 @@
                 app:layout_constraintStart_toEndOf="@+id/amazon_login"
                 app:layout_constraintTop_toBottomOf="@+id/google_login" />
 
+            <com.zjh.social.view.TwitterLoginButton
+                android:id="@+id/twitter_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@+id/slack_login"
+                app:layout_constraintTop_toBottomOf="@+id/google_login" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
