@@ -29,5 +29,5 @@
 |      | Slack          | SlackLoginButton    | SlackLogin    | SlackParams    |
 |      | Twitter        | TwitterLoginButton  | TwitterLogin  | TwitterParams  |
 
-![](./img/image_home.png)
+![](./img/image_home.png width = 300)
 
