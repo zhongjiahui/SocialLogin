@@ -64,4 +64,6 @@ dependencies {
         exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
         exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel'
     }
+    // Amazon
+    compileOnly files('libs/login-with-amazon-sdk.jar')
 }

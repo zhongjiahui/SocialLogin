@@ -101,7 +101,7 @@ public class LineLogin extends SocialAuthenticator<LineParams>{
                     }
                     Log.i(TAG, "Auth onSuccess");
                     String idToken = (result.getLineIdToken() == null ? null : result.getLineIdToken().getRawString());
-                    callback.call(ResultCode.AUTH_SUCCESS, "Auth onSuccess", accessToken);
+                    callback.call(ResultCode.AUTH_SUCCESS, "Auth onSuccess", "accessToken = " + accessToken + " idToken = " + idToken);
                     break;
                 case CANCEL:
                     // Login canceled by user

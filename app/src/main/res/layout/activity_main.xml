@@ -196,6 +196,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/google_login" />
 
+            <com.zjh.social.view.AmazonLoginButton
+                android:id="@+id/amazon_login"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@+id/line_login"
+                app:layout_constraintTop_toBottomOf="@+id/google_login" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

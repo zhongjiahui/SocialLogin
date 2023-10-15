@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.zjh.social.callback.AuthCallback;
+import com.zjh.social.handler.AmazonLogin;
 import com.zjh.social.handler.FacebookLogin;
 import com.zjh.social.handler.GitLabLogin;
 import com.zjh.social.handler.GiteeLogin;
@@ -21,6 +22,7 @@ import com.zjh.social.handler.QQLogin;
 import com.zjh.social.handler.WeiboLogin;
 import com.zjh.social.login.databinding.ActivityMainBinding;
 import com.zjh.social.params.AlipayParams;
+import com.zjh.social.params.AmazonParams;
 import com.zjh.social.params.BaiduParams;
 import com.zjh.social.params.DingTalkParams;
 import com.zjh.social.params.DouYinParams;
@@ -68,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
         initGithubLogin();
         initGitLabLogin();
         initLineLogin();
-    }
+        initAmazonLogin();
+        AmazonLogin.getInstance().onCreate(this);
 
+    }
 
 
     private void initWechatLogin(){
@@ -275,6 +279,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initAmazonLogin() {
+        AmazonParams params = new AmazonParams();
+        binding.amazonLogin.setOnLoginListener(params, new AuthCallback<Object>() {
+            @Override
+            public void call(int code, String message, Object data) {
+                printLog(code, message, data);
+
+            }
+        });
+    }
+
     private void printLog(int code, String message, Object data){
         Log.e(TAG, "call: code = " + code + " \nmessage = " + message + " \ndata = " + data);
     }
@@ -283,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         LarkLogin.getInstance().onResume(this);
+        AmazonLogin.getInstance().onResume();
     }
 
     @Override
