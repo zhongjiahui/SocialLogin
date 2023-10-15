@@ -59,4 +59,9 @@ dependencies {
     // 钉钉
     implementation 'com.alibaba.android:ddopenauth:1.5.0.8'
     implementation 'com.alibaba.android:ddsharesdk:1.1.0'
+    // Line
+    implementation ("com.linecorp.linesdk:linesdk:latest.release"){
+        exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
+        exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel'
+    }
 }
